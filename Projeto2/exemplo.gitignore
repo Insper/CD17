@@ -1,0 +1,3 @@
+# Atenção: Este arquivo precisa se chamar somente .gitignore (só a extensão, sem o nome do arquivo)
+#Arquivos que serão ignorados pelo Github
+*.pass
