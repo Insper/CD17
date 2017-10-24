@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js" >
+  </script>
+
+  <script>
+  versao = "A"
+
+  </script>
+
+  <script src="scripts/main.js"></script>
+<script>
+
+    function verify(){
+
+      // definir critério se usuário terminou
+
+      var ok = 0;
+
+      if (document.getElementById("dog1").checked && document.getElementById("dog2").checked && document.getElementById("dog3").checked && document.getElementById("dog4").checked && document.getElementById("dog5").checked && document.getElementById("dog6").checked && document.getElementById("dog7").checked && document.getElementById("dog8").checked == true){
+        ok = 1;
+
+      }
+
+
+      if (ok == 1){
+        // se terminou, gravar tempo final
+
+        // redirecionar para página de agradecimentos
+        envia("final", id_pessoa, Date.now(), versao);
+
+        window.location.replace("agradecimento.html");
+
+      } else {
+        alert("Ainda falta selecionar um cão!");
+      }
+
+
+    }
+
+
+    </script>
+    <meta charset="utf-8">
+    <title>Welcome to Firebase Hosting</title>
+    <style media="screen">
+      body {
+        font-family: Roboto, Arial, sans-serif;
+        background: #ECEFF1;
+        color: rgba(0,0,0,0.87);
+      }
+
+      a {
+        color: rgb(3,155,229);
+      }
+
+
+    #button_div {
+
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */      
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    </style>
+  </head>
+  <body onload="tempo_inicial();">
+      <script src="client.min.js"></script>
+      <script>
+        var client = new ClientJS();
+
+        var id_pessoa = client.getFingerprint();
+
+      </script>  
+
+    <div>
+      <table>
+<tr><td><input type="checkbox" id="dog1"> </td><td><img src="img/dog1.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat7"> </td><td><img src="img/cat7.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat6"> </td><td><img src="img/cat6.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog6"> </td><td><img src="img/dog6.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog3"> </td><td><img src="img/dog3.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog5"> </td><td><img src="img/dog5.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog4"> </td><td><img src="img/dog4.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat1"> </td><td><img src="img/cat1.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat4"> </td><td><img src="img/cat4.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat2"> </td><td><img src="img/cat2.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog7"> </td><td><img src="img/dog7.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat5"> </td><td><img src="img/cat5.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog8"> </td><td><img src="img/dog8.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="dog2"> </td><td><img src="img/dog2.jpeg" width=80 height=80></td></tr>
+<tr><td><input type="checkbox" id="cat3"> </td><td><img src="img/cat3.jpeg" width=80 height=80></td></tr>
+</table>
+    </div>
+
+
+    <div id="button_div">
+      <button onclick="verify();">Terminei!</button>
+    </div>
+  </body>
+</html>
