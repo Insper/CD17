@@ -119,7 +119,7 @@ Pede-se:
 O que os valores encontrados implicam para a regressão?
 
 
-**b).** Escreva a função que foi encontrada pela regressão ( `price` em função de  `sqft_lot`  e `sqft_basement`)
+**b).** Escreva a função que foi encontrada pela regressão (`price` em função de  `sqft_lot`  e `sqft_basement`)
 
 
 ```python
